@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    padding: 20px;
+    background-color: #1d1d1d;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #2a2a2a;
+    color: white;
+    font-size: 16px;
+}
+
+main {
+    padding: 20px;
+}
+
+.song-list {
+    display: flex;
+    flex-direction: column;  /* Changed from row to column for vertical layout */
+    gap: 15px;  /* Space between each song */
+    overflow-y: auto;  /* Enables vertical scrolling */
+    max-height: 80vh;  /* Set max height for vertical scroll */
+}
+
+.song-item {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.song-item:hover {
+    transform: scale(1.05);
+}
+
+.song-info p {
+    margin-top: 10px;
+}
+
+.play-btn {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.play-btn:hover {
+    background-color: #1ed760;
+}
+
+audio {
+    display: none; /* Hide the audio element */
+}
+
+@media screen and (max-width: 768px) {
+    .song-list {
+        gap: 10px;
+    }
+
+    .song-item {
+        padding: 10px;
+    }
+
+    .play-btn {
+        padding: 6px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-container input {
+        max-width: 100%;
+    }
+
+    .song-item {
+        padding: 8px;
+    }
+
+    .play-btn {
+        padding: 5px 10px;
+    }
+}
