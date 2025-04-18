@@ -3,289 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SheCare - Sanitary Pad Subscription</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Pay with Paytm</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
     body {
-      background: #fef4f7;
-      color: #333;
-    }
-
-    header {
-      background-color: #ff4c8b;
-      color: #fff;
-      padding: 1.2rem 2rem;
+      font-family: Arial, sans-serif;
       text-align: center;
-      font-size: 1rem;
-      font-weight: 600;
+      padding-top: 100px;
+      background-color: #f2f2f2;
     }
-
-    nav {
-      background-color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      position: relative;
+    h1 {
+      color: #0f3057;
     }
-
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #ff4c8b;
-      font-weight: 600;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: #ff4c8b;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: white;
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem 2rem;
-        display: none;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }
-
-    .hero {
-      background: url('https://tse1.mm.bing.net/th?id=OIP.MooAjw886ehnacLM1xHhNAHaEo&pid=Api&P=0&h=180') center/cover;
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #002970;
       color: white;
-      text-align: center;
-      padding: 6rem 2rem;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-    }
-
-    .section {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    .section h2 {
-      font-size: 2rem;
-      color: #ff4c8b;
-      margin-bottom: 1rem;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background-color: #fff;
-      padding: 1.5rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    .card h3 {
-      margin-bottom: 0.5rem;
-      color: #ff4c8b;
-    }
-
-    .cta {
-      background-color: #ff4c8b;
-      color: #fff;
-      padding: 2rem;
-      border-radius: 1rem;
-      text-align: center;
-      margin: 2rem;
-    }
-
-    .cta button, .form button {
-      background-color: #fff;
-      color: #ff4c8b;
       border: none;
-      padding: 0.8rem 2rem;
-      font-weight: 600;
-      font-size: 1rem;
-      border-radius: 2rem;
-      margin-top: 1rem;
+      border-radius: 10px;
       cursor: pointer;
     }
-
-    footer {
-      background-color: #ffe1ec;
-      color: #333;
-      text-align: center;
-      padding: 1rem;
+    button:hover {
+      background-color: #0143a3;
     }
-
-    .form {
-      display: flex;
-      flex-direction: column;
-      max-width: 500px;
-      margin: 2rem auto;
-      gap: 1rem;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .form input, .form select {
-      padding: 0.7rem;
-      border-radius: 0.5rem;
-      border: 1px solid #ccc;
+    .note {
+      margin-top: 20px;
+      color: gray;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <header>
-    SheCare - Your Comfort Partner
-  </header>
-
-  <nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="nav-links" id="navLinks">
-      <a href="#features">Features</a>
-      <a href="#kits">Starter Kits</a>
-      <a href="#subscribe">Subscribe</a>
-      <a href="#tracker">Tracker</a>
-      <a href="#contact">Contact</a>
-      <a href="sanitaryshop.html">Shop</a>
-    </div>
-  </nav>
-
-  <div class="hero">
-    <h1>Sanitary Pads Delivered Anytime</h1>
-    <p>Affordable. Discreet. Custom. Never Run Out Again.</p>
-  </div>
-
-  <div class="section" id="features">
-    <h2>Why Choose Us?</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Custom Packs</h3>
-        <p>Select size, flow, quantity. Your pack, your way.</p>
-      </div>
-      <div class="card">
-        <h3>Eco-Friendly Pads</h3>
-        <p>Biodegradable & organic options available.</p>
-      </div>
-      <div class="card">
-        <h3>First-Period Kits</h3>
-        <p>Starter kits with pads, chocolate, tracker & guide.</p>
-      </div>
-      <div class="card">
-        <h3>Discreet Packaging</h3>
-        <p>Delivered in plain, no-brand bags to maintain privacy.</p>
-      </div>
-      <div class="card">
-        <h3>Subscription Plans</h3>
-        <p>Auto-deliver pads every month. Pause anytime.</p>
-      </div>
-      <div class="card">
-        <h3>Emergency Delivery</h3>
-        <p>Late-night? No problem. Get urgent delivery instantly.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section" id="kits">
-    <h2>First-Period Kits</h2>
-    <p>Perfect for teens, includes care + comfort essentials.</p>
-  </div>
-
-  <div class="section cta" id="subscribe">
-    <h2>Start Your Subscription</h2>
-    <p>Customize your pack below:</p>
-    <form class="form" onsubmit="submitSubscription(event)">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <select required>
-        <option value="">Select Pad Type</option>
-        <option value="regular">Regular</option>
-        <option value="overnight">Overnight</option>
-        <option value="eco">Eco-Friendly</option>
-      </select>
-      <select required>
-        <option value="">Select Quantity</option>
-        <option>10</option>
-        <option>20</option>
-        <option>30</option>
-      </select>
-      <button type="submit">Subscribe Now</button>
-    </form>
-  </div>
-
-  <div class="section" id="tracker">
-    <h2>Period Tracker</h2>
-    <form class="form" onsubmit="calculateNextPeriod(event)">
-      <label>Enter Last Period Date:</label>
-      <input type="date" id="lastPeriod" required>
-      <label>Average Cycle Length (in days):</label>
-      <input type="number" id="cycleLength" min="20" max="40" required>
-      <button type="submit">Predict Next Period</button>
-    </form>
-    <p id="prediction" style="text-align:center;margin-top:1rem;font-weight:600;color:#ff4c8b;"></p>
-  </div>
-
-  <footer id="contact">
-    <p>&copy; 2025 SheCare. All rights reserved. | Contact: support@shecare.in</p>
-  </footer>
+  <h1>Pay to Atarra Foods</h1>
+  <p>Click the button below to pay using Paytm UPI</p>
+  <button onclick="payViaPaytm()">Pay Now</button>
+  <p class="note">Make sure Paytm app is installed on your phone</p>
 
   <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('active');
-    }
+    function payViaPaytm() {
+      // Paytm deep link via intent (Android only)
+      const paytmIntent = `intent://upi/pay?pa=6389225166@pthdfc&pn=Atarra%20Foods&am=1&cu=INR#Intent;scheme=paytm;package=net.one97.paytm;end`;
+      window.location.href = paytmIntent;
 
-    function submitSubscription(event) {
-      event.preventDefault();
-      alert("Thank you for subscribing! We'll deliver your custom pack every month.");
-    }
-
-    function calculateNextPeriod(event) {
-      event.preventDefault();
-      const lastPeriod = new Date(document.getElementById('lastPeriod').value);
-      const cycleLength = parseInt(document.getElementById('cycleLength').value);
-      if (!isNaN(lastPeriod) && !isNaN(cycleLength)) {
-        const nextDate = new Date(lastPeriod.getTime() + cycleLength * 24 * 60 * 60 * 1000);
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById('prediction').innerText = `Your next period is expected on ${nextDate.toLocaleDateString(undefined, options)}.`;
-      } else {
-        document.getElementById('prediction').innerText = "Please enter valid inputs.";
-      }
+      // Fallback if intent doesn't work
+      setTimeout(() => {
+        alert("If Paytm didn't open, make sure it's installed and set as UPI handler.");
+      }, 3000);
     }
   </script>
 </body>
